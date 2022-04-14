@@ -1,0 +1,50 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  
+  <PropertyGroup>
+    <TargetFrameworks>net461;netstandard2.0;net40;net45;net46;netcoreapp2.1</TargetFrameworks>
+    <RootNamespace>GoodIdSdkTests</RootNamespace>
+
+    <IsPackable>false</IsPackable>
+
+    <ApplicationIcon />
+
+    <OutputType>Library</OutputType>
+
+	
+	<PackageIconUrl>https://s3-us-west-2.amazonaws.com/goodid/goodid_logo_180.png</PackageIconUrl>
+    <RepositoryUrl>https://github.com/idandtrust/goodid-dotnet-sdk</RepositoryUrl>
+    <PackageLicenseUrl>https://github.com/idandtrust/goodid-dotnet-sdk/blob/master/LICENSE</PackageLicenseUrl>
+    <Description>This the test library for GoodID.SDKNetCore project.</Description>
+    <Product>GoodID</Product>
+    <Company>ID&amp;Trust Ltd</Company>
+    <Authors>GoodID</Authors>
+    <PackageId>GoodID.SDKNetCore.Tests</PackageId>
+    <PackageTags>OpenId, GoodId, SDK</PackageTags>
+    <PackageProjectUrl>https://goodid.net/</PackageProjectUrl>
+    <RepositoryType>git</RepositoryType>
+    <VersionPrefix>3.0.2</VersionPrefix>	
+    <StartupObject />
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <WarningLevel>2</WarningLevel>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="src\**" />
+    <EmbeddedResource Remove="src\**" />
+    <None Remove="src\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.0.1" />
+    <PackageReference Include="NUnit" Version="3.11.0" />
+    <PackageReference Include="NUnit.ConsoleRunner" Version="3.9.0" />
+    <PackageReference Include="NUnit3TestAdapter" Version="3.13.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\GoodID.SDKNetCore.csproj" />
+  </ItemGroup>
+
+</Project>
